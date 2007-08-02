@@ -26,7 +26,7 @@ BuildRequires: dbus-python
 BuildRequires: libgpod-devel
 BuildRequires: xorg-x11-Xvfb
 BuildRequires: gtk2-devel
-BuildRequires: gstreamer0.10-python
+BuildRequires: gstreamer0.10-python-devel
 BuildRequires: intltool
 BuildRequires: mutagen
 BuildRequires: desktop-file-utils
