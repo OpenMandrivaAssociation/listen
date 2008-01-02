@@ -48,6 +48,7 @@ Requires:   gstreamer0.10-plugins-good
 Requires:   gstreamer0.10-plugins-base
 Requires:   mutagen
 Requires:   gnome-python-gtkmozembed
+BuildRoot: %{_tmppath}/%{name}-%{version}
 
 %description
 Listen is a music manager and player for GNOME
