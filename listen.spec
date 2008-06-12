@@ -121,10 +121,14 @@ rm -rf %buildroot
 %{_mandir}/man1/%{name}.1*
 %{_datadir}/dbus-1/services/org.gnome.Listen.service
 
+%if %mdkversion < 200900
 %post 
 %{update_menus}
+%endif
 
+%if %mdkversion < 200900
 %postun
 %{clean_menus}
+%endif
 
 
