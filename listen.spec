@@ -1,6 +1,6 @@
 %define name    listen
 %define version 0.5
-%define rel     3
+%define rel     4
 %define release %mkrel %rel
 
 Name:       %name
@@ -24,7 +24,6 @@ BuildRequires: gnome-python-extras
 BuildRequires: gnome-python-gtkmozembed
 BuildRequires: dbus-python
 BuildRequires: libgpod-devel
-BuildRequires: xorg-x11-Xvfb
 BuildRequires: gtk2-devel
 BuildRequires: gstreamer0.10-python-devel
 BuildRequires: intltool
@@ -40,7 +39,6 @@ Requires:   gnome-python-gnomevfs
 Requires:   gnome-python-extras
 Requires:   gnome-python
 Requires:   gnome-python-gtkhtml2
-Requires:   gstreamer-alsa
 Requires:   gstreamer
 Requires:   gstreamer0.10-python 
 Requires:   gstreamer0.10-plugins-ugly
