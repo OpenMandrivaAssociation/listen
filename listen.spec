@@ -29,7 +29,7 @@ BuildRequires: gstreamer0.10-python-devel
 BuildRequires: intltool
 BuildRequires: mutagen
 BuildRequires: desktop-file-utils
-BuildRequires: ImageMagick
+BuildRequires: imagemagick
 Requires:   python
 Requires:   python-sqlite2
 Requires:   pyvorbis
