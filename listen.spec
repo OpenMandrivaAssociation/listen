@@ -1,19 +1,19 @@
 %define name    listen
-%define version 0.5
-%define rel     5
+%define version 0.6.2
+%define rel     1
 %define release %mkrel %rel
 
 Name:       %name
 Version:    %version
 Release:    %release
 Summary:    A music manager and player for GNOME
-License:    GPL
+License:    GPLv2
 Group:      Sound
-URL:        http://listengnome.free.fr/
-Source:     http://ovh.dl.sourceforge.net/sourceforge/listengnome/%name-%{version}.tar.bz2
-Patch:      listen-0.5-dbus_0.80.patch
+URL:        http://www.listen-project.org/
+Source:     %name-%{version}.tar.gz
 BuildRequires: python-devel
 BuildRequires: python-sqlite2
+BuildRequires: python-daap
 BuildRequires: python-musicbrainz2
 BuildRequires: python-tunepimp
 BuildRequires: pyvorbis
@@ -21,7 +21,7 @@ BuildRequires: pyogg
 BuildRequires: pymad
 BuildRequires: pygtk2.0-devel
 BuildRequires: gnome-python-extras
-BuildRequires: gnome-python-gtkmozembed
+BuildRequires: python-webkitgtk
 BuildRequires: dbus-python
 BuildRequires: libgpod-devel
 BuildRequires: gtk2-devel
@@ -32,6 +32,9 @@ BuildRequires: desktop-file-utils
 BuildRequires: imagemagick
 Requires:   python
 Requires:   python-sqlite2
+Requires:   python-daap
+Requires:   python-musicbrainz2
+requires:   python-tunepimp
 Requires:   pyvorbis
 Requires:   pyogg
 Requires:   pymad
@@ -45,7 +48,7 @@ Requires:   gstreamer0.10-plugins-ugly
 Requires:   gstreamer0.10-plugins-good
 Requires:   gstreamer0.10-plugins-base
 Requires:   mutagen
-Requires:   gnome-python-gtkmozembed
+Requires:   python-webkitgtk
 BuildRoot: %{_tmppath}/%{name}-%{version}
 
 %description
@@ -79,7 +82,6 @@ With listen you will be able to:
 for i in $( find src -name '*.py' ); do
      perl -pi -e 'print "# -*- coding: utf-8 -*-\n"  if $. == 1 ;' $i
 done;
-%patch -p0
 
 %build
 make
