@@ -1,5 +1,5 @@
 %define name    listen
-%define version 0.6.2
+%define version 0.6.3
 %define rel     1
 %define release %mkrel %rel
 
@@ -10,7 +10,7 @@ Summary:    A music manager and player for GNOME
 License:    GPLv2
 Group:      Sound
 URL:        http://www.listen-project.org/
-Source:     %name-%{version}.tar.gz
+Source:     http://download.listen-project.org/lastest/%name-%{version}.tar.gz
 BuildRequires: python-devel
 BuildRequires: python-sqlite2
 BuildRequires: python-daap
