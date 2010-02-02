@@ -1,6 +1,6 @@
 %define name    listen
 %define version 0.6.3
-%define rel     1
+%define rel     2
 %define release %mkrel %rel
 
 Name:       %name
@@ -49,6 +49,8 @@ Requires:   gstreamer0.10-plugins-good
 Requires:   gstreamer0.10-plugins-base
 Requires:   mutagen
 Requires:   python-webkitgtk
+Requires:   python-pyinotify
+Requires:   python-gpod
 BuildRoot: %{_tmppath}/%{name}-%{version}
 
 %description
