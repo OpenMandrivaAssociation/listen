@@ -1,6 +1,6 @@
 %define name    listen
 %define version 0.6.4
-%define rel     1
+%define rel     2
 %define release %mkrel %rel
 
 Name:       %name
@@ -34,7 +34,7 @@ Requires:   python
 Requires:   python-sqlite2
 Requires:   python-daap
 Requires:   python-musicbrainz2
-requires:   python-tunepimp
+Requires:   python-tunepimp
 Requires:   pyvorbis
 Requires:   pyogg
 Requires:   pymad
@@ -95,9 +95,12 @@ make install PREFIX=%buildroot/%_prefix/
 
 # menu
 desktop-file-install --vendor="" \
-    --remove-category="Application" \
+    --remove-category="Application;Music" \
+    --add-category="Audio" \
     --add-category="GTK" \
     --add-category="X-MandrivaLinux-Multimedia-Sound" \
+    --remove-mime-type="audip/mp3" \
+    --add-mime-type="audio/mp3" \
     --dir %{buildroot}%{_datadir}/applications \
     %{buildroot}%{_datadir}/applications/*
 
