@@ -9,7 +9,7 @@ Release:    %release
 Summary:    A music manager and player for GNOME
 License:    GPLv2
 Group:      Sound
-URL:        http://www.listen-project.org/
+URL:        https://www.listen-project.org/
 Source:     http://download.listen-project.org/lastest/%name-%{version}.tar.gz
 BuildRequires: python-devel
 BuildRequires: python-sqlite2
