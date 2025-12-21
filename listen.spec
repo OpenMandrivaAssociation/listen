@@ -11,6 +11,7 @@ License:    GPLv2
 Group:      Sound
 URL:        https://www.listen-project.org/
 Source:     http://download.listen-project.org/lastest/%name-%{version}.tar.gz
+BuildRequires:	make
 BuildRequires: python-devel
 BuildRequires: python-sqlite2
 BuildRequires: python-daap
