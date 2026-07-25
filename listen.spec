@@ -1,7 +1,7 @@
 %define name    listen
 %define version 0.6.5
 %define rel     1
-%define release %mkrel %rel
+%define release %rel.1
 
 Name:       %name
 Version:    %version
